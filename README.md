@@ -274,4 +274,3 @@ VIT Bhopal University
 
 ---
 
-⭐ **If you find this project useful, consider giving the repository a star!**
