@@ -1,0 +1,219 @@
+# xUnit Test Project
+
+A unit testing project built using **xUnit.net** and **.NET** to validate the functionality, reliability, and correctness of application components. The project contains automated test cases designed to verify individual methods and application logic in an isolated and repeatable manner.
+
+---
+
+## About the Project
+
+This project demonstrates the implementation of **unit testing using xUnit.net** in a .NET application. Unit tests are written to validate the behavior of individual components and ensure that the application produces the expected results under different scenarios.
+
+The test project can be used alongside **ASP.NET Core MVC**, **ASP.NET Core Web API**, or other .NET applications to improve code quality and reduce the risk of introducing bugs during development.
+
+The tests follow the **Arrange-Act-Assert (AAA)** pattern, making them easy to understand, maintain, and extend.
+
+---
+
+## Features
+
+* Unit testing using xUnit.net
+* Automated test execution
+* Validation of application logic
+* Multiple test scenarios
+* Isolated test cases
+* Repeatable and reliable tests
+* Test result reporting
+* Integration with Visual Studio Test Explorer
+* Supports .NET CLI test execution
+* Easy integration with CI/CD pipelines
+
+---
+
+## Technologies Used
+
+| Technology                 | Purpose                          |
+| -------------------------- | -------------------------------- |
+| **C#**                     | Programming Language             |
+| **.NET**                   | Application Development Platform |
+| **xUnit.net**              | Unit Testing Framework           |
+| **Microsoft.NET.Test.Sdk** | Test Execution Platform          |
+| **Visual Studio**          | Development Environment          |
+| **.NET CLI**               | Build and Test Automation        |
+
+---
+
+## Testing Workflow
+
+The project follows the **Arrange-Act-Assert (AAA)** testing pattern:
+
+```text
+┌──────────────────────┐
+│       Arrange       │
+│ Prepare test data   │
+│ and required setup  │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│        Act           │
+│ Execute the method   │
+│ or functionality     │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│       Assert         │
+│ Verify the actual    │
+│ result is expected   │
+└──────────────────────┘
+```
+
+---
+
+## Project Structure
+
+```text
+xUnitTestProject/
+│
+├── Tests/
+│   ├── ExampleTests.cs
+│   └── ServiceTests.cs
+│
+├── Fixtures/
+│   └── TestFixture.cs
+│
+├── xUnitTestProject.csproj
+└── README.md
+```
+
+## Prerequisites
+
+Before running the tests, make sure you have the following installed:
+
+* [.NET SDK](https://dotnet.microsoft.com/download)
+* [Visual Studio](https://visualstudio.microsoft.com/)
+* xUnit.net
+* Microsoft.NET.Test.Sdk
+
+---
+
+## Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/xUnitTestProject.git
+```
+
+### 2. Navigate to the Project Directory
+
+```bash
+cd xUnitTestProject
+```
+
+### 3. Restore Dependencies
+
+```bash
+dotnet restore
+```
+
+### 4. Build the Project
+
+```bash
+dotnet build
+```
+
+---
+
+## Running Tests
+
+Run all unit tests using the .NET CLI:
+
+```bash
+dotnet test
+```
+
+For detailed test output:
+
+```bash
+dotnet test --logger "console;verbosity=detailed"
+```
+
+To run tests without rebuilding the project:
+
+```bash
+dotnet test --no-build
+```
+
+---
+
+## Example Test
+
+A typical xUnit test follows the Arrange-Act-Assert pattern:
+
+```csharp
+[Fact]
+public void Add_ShouldReturnCorrectResult()
+{
+    // Arrange
+    var calculator = new Calculator();
+
+    // Act
+    var result = calculator.Add(10, 20);
+
+    // Assert
+    Assert.Equal(30, result);
+}
+```
+
+---
+
+## Common xUnit Attributes
+
+| Attribute              | Description                                      |
+| ---------------------- | ------------------------------------------------ |
+| `[Fact]`               | Defines a test method with a fixed set of inputs |
+| `[Theory]`             | Defines a parameterized test                     |
+| `[InlineData]`         | Provides input data to a theory                  |
+| `[Fact(Skip = "...")]` | Skips a specific test                            |
+| `IClassFixture<T>`     | Shares a fixture instance between tests          |
+
+---
+
+## Project Objectives
+
+The main objectives of this project are:
+
+* To understand unit testing using xUnit.net.
+* To validate application functionality automatically.
+* To identify bugs early during development.
+* To improve software reliability and code quality.
+* To practice the Arrange-Act-Assert testing pattern.
+* To create maintainable and repeatable automated tests.
+* To integrate automated testing into development and CI/CD workflows.
+
+---
+
+## Future Enhancements
+
+Potential improvements for future versions include:
+
+* Integration testing
+* ASP.NET Core Web API endpoint testing
+* Database integration testing
+* Mocking using Moq
+* Code coverage analysis
+* CI/CD pipeline integration
+* Automated testing with Docker
+* Automated test reporting
+
+---
+
+##  Author
+
+**Rajarshi Debbarma**
+B.Tech – Computer Science and Engineering
+VIT Bhopal University
+
+---
+
