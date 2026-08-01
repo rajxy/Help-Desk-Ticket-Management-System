@@ -1,0 +1,272 @@
+# Help Desk Ticket Management System
+
+A web-based **Help Desk Ticket Management System** built using **ASP.NET Core MVC** that helps organizations efficiently create, manage, track, assign, and resolve support tickets through a centralized platform.
+
+---
+
+## About the Project
+
+The Help Desk Ticket Management System is designed to simplify and organize the process of handling support requests. Users can raise tickets for their issues, while administrators or support staff can manage tickets, assign them to appropriate personnel, set priorities, update statuses, and resolve issues efficiently.
+
+The system provides a structured workflow that improves communication between users and support teams, reduces response time, and maintains a complete history of support requests.
+
+---
+
+##  Features
+
+* User Authentication and Authorization
+* Create and Submit Support Tickets
+* View and Manage Tickets
+* Assign Tickets to Support Staff
+* Set Ticket Priority
+* Categorize Support Issues
+* Update Ticket Status
+* Resolve and Close Tickets
+* Search and Filter Tickets
+* Centralized Ticket Management
+* Maintain Ticket History
+* Responsive and User-Friendly Interface
+
+---
+
+## Technologies Used
+
+| Technology                | Purpose                      |
+| ------------------------- | ---------------------------- |
+| **ASP.NET Core MVC**      | Web Application Framework    |
+| **C#**                    | Backend Programming Language |
+| **Entity Framework Core** | ORM and Database Operations  |
+| **Microsoft SQL Server**  | Database Management          |
+| **Razor Views**           | Dynamic Web Pages            |
+| **HTML5**                 | Webpage Structure            |
+| **CSS3**                  | Styling                      |
+| **Bootstrap**             | Responsive UI Design         |
+| **Visual Studio**         | Development Environment      |
+
+---
+
+## Project Architecture
+
+The project follows the **Model-View-Controller (MVC)** architectural pattern.
+
+```text
+┌──────────────────────┐
+│        User          │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│       View           │
+│    Razor / HTML      │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│     Controller       │
+│      C# / MVC        │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│       Model          │
+│   Entity Framework   │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│   SQL Server Database│
+└──────────────────────┘
+```
+
+---
+
+## Project Structure
+
+```text
+HelpDeskTicketManagementSystem/
+│
+├── Controllers/
+│   └── TicketController.cs
+│
+├── Models/
+│   ├── Ticket.cs
+│   └── User.cs
+│
+├── Views/
+│   ├── Home/
+│   ├── Ticket/
+│   └── Shared/
+│
+├── Data/
+│   └── ApplicationDbContext.cs
+│
+├── Migrations/
+│
+├── wwwroot/
+│   ├── css/
+│   ├── js/
+│   └── lib/
+│
+├── appsettings.json
+├── Program.cs
+└── HelpDeskTicketManagementSystem.csproj
+```
+
+## Prerequisites
+
+Before running the project, make sure you have the following installed:
+
+* [.NET SDK](https://dotnet.microsoft.com/download)
+* [Visual Studio](https://visualstudio.microsoft.com/)
+* Microsoft SQL Server
+* SQL Server Management Studio (SSMS)
+* Entity Framework Core CLI (if required)
+
+---
+
+## Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/HelpDeskTicketManagementSystem.git
+```
+
+### 2. Navigate to the Project Directory
+
+```bash
+cd HelpDeskTicketManagementSystem
+```
+
+### 3. Configure the Database
+
+Open the `appsettings.json` file and update the SQL Server connection string according to your local database configuration.
+
+Example:
+
+```json
+"ConnectionStrings": {
+  "DefaultConnection": "Server=YOUR_SERVER;Database=HelpDeskDB;Trusted_Connection=True;TrustServerCertificate=True;"
+}
+```
+
+### 4. Apply Database Migrations
+
+Run the following command in the Package Manager Console or terminal:
+
+```bash
+dotnet ef database update
+```
+
+If migrations have not been created yet, use:
+
+```bash
+dotnet ef migrations add InitialCreate
+```
+
+Then:
+
+```bash
+dotnet ef database update
+```
+
+### 5. Run the Application
+
+Run the following command:
+
+```bash
+dotnet run
+```
+
+Or open the project in **Visual Studio** and press:
+
+```text
+Ctrl + F5
+```
+
+or
+
+```text
+F5
+```
+
+---
+
+##  Database
+
+The application uses **Microsoft SQL Server** as its database system and **Entity Framework Core** for database operations.
+
+The database stores information related to:
+
+* Users
+* Support Tickets
+* Ticket Categories
+* Ticket Priorities
+* Ticket Status
+* Ticket Assignments
+* Ticket History
+
+---
+
+##  Ticket Workflow
+
+The general ticket workflow is:
+
+```text
+Create Ticket
+      │
+      ▼
+   Pending
+      │
+      ▼
+   Assigned
+      │
+      ▼
+ In Progress
+      │
+      ▼
+   Resolved
+      │
+      ▼
+    Closed
+```
+
+This workflow allows support teams to efficiently monitor and manage the lifecycle of each ticket.
+
+---
+
+##  Project Objectives
+
+The main objectives of this project are:
+
+* To provide a centralized platform for managing support tickets.
+* To improve communication between users and support staff.
+* To reduce ticket resolution time.
+* To organize support requests based on priority and category.
+* To maintain a complete history of reported issues.
+* To improve the overall efficiency of help desk operations.
+
+---
+
+##  Future Enhancements
+
+The following features can be added in future versions:
+
+* Email notifications
+* Real-time ticket notifications
+* File and document attachments
+* Ticket comments and conversations
+* Admin analytics and reporting dashboard
+* Advanced role-based access control
+* SLA and ticket escalation management
+* Detailed ticket performance reports
+
+---
+
+## Author
+
+**Rajarshi Debbarma**
+B.Tech – Computer Science and Engineering
+VIT Bhopal University
+
+---
