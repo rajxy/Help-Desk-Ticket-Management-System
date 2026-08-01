@@ -1,0 +1,521 @@
+Rajarshi Debbarma 
+IN26009615
+________________________________________
+ASP.NET CORE DEVELOPMENT PROJECTS
+A Comprehensive Technical Project Report
+Projects Covered
+1. Help Desk Ticket Management System – ASP.NET Core MVC
+2. ASP.NET Core Web API
+3. xUnit Test Project
+________________________________________
+Table of Contents
+1.	Introduction
+2.	Repository Overview
+3.	Project Objectives
+4.	Technologies and Tools Used
+5.	Project 1 – Help Desk Ticket Management System
+6.	Project 2 – ASP.NET Core Web API
+7.	Project 3 – xUnit Test Project
+8.	Integration and Development Workflow
+9.	Testing Strategy
+10.	Project Structure
+11.	Key Learning Outcomes
+12.	Future Enhancements
+13.	Conclusion
+14.	Author
+________________________________________
+1. Introduction
+This repository is a collection of projects developed using the Microsoft .NET and ASP.NET Core ecosystem. It demonstrates practical implementation of modern web application development, RESTful API development, database integration, and automated software testing.
+The repository consists of three major components:
+•	A web-based Help Desk Ticket Management System developed using ASP.NET Core MVC.
+•	A RESTful ASP.NET Core Web API designed to provide backend services and CRUD functionality.
+•	An xUnit Test Project created to perform automated unit testing and validate application functionality.
+Together, these projects demonstrate the complete development lifecycle of a modern .NET-based application, from building the user interface and backend services to testing application logic.
+The projects use technologies such as C#, ASP.NET Core, Entity Framework Core, Microsoft SQL Server, Razor Views, Bootstrap, Swagger/OpenAPI, and xUnit.net.
+________________________________________
+2. Repository Overview
+The repository is organized around three important areas of modern software development.
+ASP.NET Core Development Projects
+│
+├── 1. ASP.NET Core MVC
+│   └── Help Desk Ticket Management System
+│
+├── 2. ASP.NET Core Web API
+│   └── RESTful Backend Services
+│
+└── 3. xUnit Test Project
+    └── Automated Unit Testing
+Each project focuses on a specific aspect of software development while collectively demonstrating how these technologies can be used together in a professional development environment.
+________________________________________
+3. Project Objectives
+The main objectives of this repository are:
+•	To understand ASP.NET Core MVC application development.
+•	To develop a functional Help Desk Ticket Management System.
+•	To implement CRUD operations using ASP.NET Core.
+•	To understand RESTful Web API architecture.
+•	To develop and test HTTP-based API endpoints.
+•	To integrate applications with Microsoft SQL Server.
+•	To perform database operations using Entity Framework Core.
+•	To understand the Model-View-Controller architecture.
+•	To implement automated unit testing using xUnit.net.
+•	To follow the Arrange-Act-Assert testing pattern.
+•	To improve code quality and application reliability.
+•	To understand modern .NET development practices.
+________________________________________
+4. Technologies and Tools Used
+Technology / Tool	Purpose
+C#	Primary programming language
+ASP.NET Core MVC	Web application development
+ASP.NET Core Web API	RESTful backend services
+Entity Framework Core	Object-relational mapping and database operations
+Microsoft SQL Server	Database management
+Razor Views	Dynamic web interface
+HTML5	Webpage structure
+CSS3	User interface styling
+Bootstrap	Responsive design
+Swagger / OpenAPI	API documentation and testing
+xUnit.net	Automated unit testing
+Visual Studio	Development environment
+.NET CLI	Project build and test execution
+Git	Version control
+GitHub	Source code hosting and documentation
+________________________________________
+5. Project 1 – Help Desk Ticket Management System
+5.1 Project Overview
+The Help Desk Ticket Management System is a web-based application developed using ASP.NET Core MVC. The purpose of the application is to provide a centralized platform for managing support requests and technical issues.
+Users can create support tickets by submitting details about their problems. Support staff or administrators can then review, assign, prioritize, update, and resolve these tickets.
+The system provides an organized workflow for handling support requests and helps improve communication between users and support teams.
+________________________________________
+5.2 Key Features
+User Authentication and Authorization
+The system can provide secure access to users and administrators through authentication and authorization mechanisms.
+Different users can be provided with appropriate permissions based on their roles.
+________________________________________
+Ticket Creation
+Users can create new support tickets by providing information such as:
+•	Ticket title
+•	Issue description
+•	Category
+•	Priority
+•	User information
+•	Date and time
+This allows support teams to receive structured information about reported problems.
+________________________________________
+Ticket Management
+Support staff can view and manage all submitted tickets.
+They can:
+•	View ticket details
+•	Update ticket information
+•	Change ticket status
+•	Assign tickets
+•	Set priority
+•	Categorize issues
+•	Resolve tickets
+________________________________________
+Ticket Assignment
+Tickets can be assigned to specific support staff members based on their expertise or availability.
+This ensures that issues are directed to the appropriate person for resolution.
+________________________________________
+Ticket Priority
+Tickets can be organized according to their importance.
+Typical priority levels include:
+•	Low
+•	Medium
+•	High
+•	Critical
+Priority management helps support teams handle urgent issues first.
+________________________________________
+Ticket Status Tracking
+The system maintains the current status of every ticket.
+A typical workflow is:
+New
+ │
+ ▼
+Pending
+ │
+ ▼
+Assigned
+ │
+ ▼
+In Progress
+ │
+ ▼
+Resolved
+ │
+ ▼
+Closed
+This allows users and support staff to monitor the progress of each issue.
+________________________________________
+Search and Filtering
+The system can provide search and filtering functionality to help users quickly find specific tickets.
+Tickets can be filtered based on:
+•	Status
+•	Priority
+•	Category
+•	Assigned staff
+•	Ticket ID
+•	Date
+________________________________________
+Ticket History
+The system maintains information about support requests and their progress.
+This helps organizations track previous issues and understand the complete lifecycle of a ticket.
+________________________________________
+5.3 MVC Architecture
+The application follows the Model-View-Controller architecture.
+             User
+               │
+               ▼
+             View
+          Razor Pages
+               │
+               ▼
+          Controller
+          C# / MVC
+               │
+               ▼
+             Model
+               │
+               ▼
+     Entity Framework Core
+               │
+               ▼
+        SQL Server
+Model
+The Model represents application data and business entities.
+Examples include:
+•	User
+•	Ticket
+•	Category
+•	Priority
+•	Status
+View
+The View represents the user interface presented to the user.
+The application uses Razor Views along with HTML, CSS, and Bootstrap.
+Controller
+The Controller handles incoming HTTP requests and coordinates communication between Views, Models, and the database.
+________________________________________
+5.4 Database Integration
+The application uses Microsoft SQL Server as the database management system.
+Entity Framework Core is used to interact with the database.
+The database may contain entities such as:
+Users
+Tickets
+Categories
+Priorities
+Statuses
+TicketAssignments
+TicketHistory
+Entity Framework Core allows the application to perform operations without writing extensive SQL queries manually.
+________________________________________
+6. Project 2 – ASP.NET Core Web API
+6.1 Project Overview
+The ASP.NET Core Web API project demonstrates the development of a RESTful backend service using ASP.NET Core.
+The API provides HTTP endpoints that allow external applications to communicate with the server and perform operations on application data.
+The API can be consumed by:
+•	Web applications
+•	Mobile applications
+•	Desktop applications
+•	Other backend services
+•	Third-party applications
+________________________________________
+6.2 Key Features
+RESTful Architecture
+The API follows REST principles and uses standard HTTP methods to perform operations.
+GET     → Retrieve data
+POST    → Create data
+PUT     → Update data
+DELETE  → Delete data
+________________________________________
+CRUD Operations
+The API supports the four fundamental CRUD operations:
+Create
+Creates a new record using a POST request.
+Read
+Retrieves existing records using GET requests.
+Update
+Updates an existing record using a PUT request.
+Delete
+Removes a record using a DELETE request.
+________________________________________
+6.3 Example API Endpoints
+HTTP Method	Endpoint	Function
+GET	/api/Example	Retrieve all records
+GET	/api/Example/{id}	Retrieve a record by ID
+POST	/api/Example	Create a new record
+PUT	/api/Example/{id}	Update an existing record
+DELETE	/api/Example/{id}	Delete a record
+________________________________________
+6.4 API Architecture
+The general architecture of the Web API is:
+Client Application
+       │
+       │ HTTP Request
+       ▼
+API Controller
+       │
+       ▼
+Service / Business Logic
+       │
+       ▼
+Entity Framework Core
+       │
+       ▼
+SQL Server Database
+       │
+       ▼
+HTTP Response
+       │
+       ▼
+Client Application
+The Controller receives HTTP requests and processes them using application logic and database services.
+________________________________________
+6.5 JSON Data Exchange
+The API uses JSON as the primary data exchange format.
+Example response:
+{
+  "id": 1,
+  "title": "Login Issue",
+  "status": "In Progress",
+  "priority": "High"
+}
+JSON provides a lightweight and standardized format for communication between the API and client applications.
+________________________________________
+6.6 Swagger / OpenAPI
+The project uses Swagger/OpenAPI for API documentation and testing.
+Swagger provides an interactive interface where developers can:
+•	View API endpoints
+•	View request parameters
+•	Send API requests
+•	Test CRUD operations
+•	View API responses
+•	Understand available endpoints
+This simplifies API development and makes the service easier to consume.
+________________________________________
+7. Project 3 – xUnit Test Project
+7.1 Project Overview
+The xUnit Test Project is designed to perform automated unit testing of application components.
+Unit testing helps verify that individual methods and components behave as expected.
+The testing project can be used with:
+•	ASP.NET Core MVC applications
+•	ASP.NET Core Web APIs
+•	Business logic
+•	Services
+•	Utility classes
+________________________________________
+7.2 Key Features
+•	Automated unit testing
+•	Test-driven validation
+•	Independent test cases
+•	Repeatable test execution
+•	Arrange-Act-Assert pattern
+•	[Fact] test methods
+•	[Theory] parameterized tests
+•	[InlineData] test data
+•	Visual Studio Test Explorer support
+•	.NET CLI test execution
+________________________________________
+7.3 Arrange-Act-Assert Pattern
+The tests follow the AAA pattern.
+Arrange
+   │
+   │ Prepare test data
+   ▼
+Act
+   │
+   │ Execute the method
+   ▼
+Assert
+   │
+   │ Verify expected result
+   ▼
+Test Passed / Failed
+Arrange
+The required objects and test data are prepared.
+Act
+The method or functionality being tested is executed.
+Assert
+The actual result is compared with the expected result.
+________________________________________
+7.4 Example xUnit Test
+[Fact]
+public void Add_ShouldReturnCorrectResult()
+{
+    // Arrange
+    var calculator = new Calculator();
+
+    // Act
+    var result = calculator.Add(10, 20);
+
+    // Assert
+    Assert.Equal(30, result);
+}
+This test verifies that the Add() method correctly returns the expected result.
+________________________________________
+7.5 Common xUnit Attributes
+Attribute	Purpose
+[Fact]	Defines a standard unit test
+[Theory]	Defines a parameterized test
+[InlineData]	Supplies data to a theory
+IClassFixture<T>	Provides shared test fixtures
+________________________________________
+7.6 Running Tests
+Tests can be executed using the .NET CLI:
+dotnet test
+Detailed output can be generated using:
+dotnet test --logger "console;verbosity=detailed"
+Tests can also be executed through Visual Studio Test Explorer.
+________________________________________
+8. Integration and Development Workflow
+The three projects represent different stages of application development.
+ASP.NET Core MVC
+       │
+       │ User Interface
+       ▼
+ASP.NET Core Web API
+       │
+       │ Backend Services
+       ▼
+Entity Framework Core
+       │
+       │ Data Access
+       ▼
+SQL Server
+       │
+       ▲
+       │
+xUnit Tests
+       │
+       │ Validate Application Logic
+       ▼
+Reliable Application
+The MVC application focuses on the user interface and application workflow.
+The Web API provides backend services and data access functionality.
+The xUnit project verifies application logic through automated tests.
+Together, these components demonstrate a structured approach to modern application development.
+________________________________________
+9. Testing Strategy
+Testing is an important part of the development process.
+The project uses automated unit tests to validate individual components and methods.
+The testing process includes:
+1.	Identifying the functionality to test.
+2.	Preparing test data.
+3.	Executing the required method.
+4.	Comparing actual and expected results.
+5.	Recording the test outcome.
+6.	Fixing issues when tests fail.
+7.	Re-running tests to verify corrections.
+The use of automated testing helps reduce regression issues and improves overall application reliability.
+________________________________________
+10. Project Structure
+A combined repository can be organized as follows:
+ASP.NET-Core-Projects/
+│
+├── HelpDeskTicketManagementSystem/
+│   ├── Controllers/
+│   ├── Models/
+│   ├── Views/
+│   ├── Data/
+│   ├── Migrations/
+│   ├── wwwroot/
+│   ├── appsettings.json
+│   └── Program.cs
+│
+├── ASP.NETCoreWebAPI/
+│   ├── Controllers/
+│   ├── Models/
+│   ├── DTOs/
+│   ├── Services/
+│   ├── Data/
+│   ├── Migrations/
+│   ├── appsettings.json
+│   └── Program.cs
+│
+├── xUnitTestProject/
+│   ├── Tests/
+│   ├── Fixtures/
+│   └── xUnitTestProject.csproj
+│
+├── .gitignore
+└── README.md
+The actual folder structure may vary based on the final implementation.
+________________________________________
+11. Key Learning Outcomes
+Through these projects, the following technical concepts were explored:
+ASP.NET Core MVC
+•	MVC architecture
+•	Controllers and Actions
+•	Models and ViewModels
+•	Razor Views
+•	CRUD operations
+•	Entity Framework Core
+•	SQL Server integration
+•	Form handling
+•	Routing
+•	Authentication and authorization concepts
+ASP.NET Core Web API
+•	RESTful API architecture
+•	HTTP methods
+•	HTTP status codes
+•	CRUD operations
+•	JSON serialization
+•	API controllers
+•	Entity Framework Core
+•	Swagger/OpenAPI
+•	API endpoint testing
+•	Service-based architecture
+xUnit Testing
+•	Unit testing
+•	Test case design
+•	Arrange-Act-Assert pattern
+•	[Fact] and [Theory]
+•	Parameterized testing
+•	Automated test execution
+•	Test-driven validation
+•	Code reliability and maintainability
+________________________________________
+12. Future Enhancements
+The projects can be further improved by implementing the following features:
+Security
+•	JWT authentication
+•	Role-based authorization
+•	OAuth integration
+•	Secure password management
+•	API security improvements
+Help Desk System
+•	Email notifications
+•	Ticket comments
+•	File attachments
+•	Real-time notifications
+•	SLA management
+•	Ticket escalation
+•	Advanced analytics dashboard
+Web API
+•	Advanced filtering and pagination
+•	API versioning
+•	Global exception handling
+•	Response caching
+•	Rate limiting
+•	API performance monitoring
+Testing
+•	Integration testing
+•	End-to-end testing
+•	Mocking with Moq
+•	Code coverage analysis
+•	Continuous Integration and Continuous Deployment
+•	Automated test reporting
+Deployment
+•	Docker containerization
+•	Azure deployment
+•	Cloud database integration
+•	GitHub Actions CI/CD
+•	Production monitoring
+________________________________________
+13. Conclusion
+This repository provides a practical demonstration of modern ASP.NET Core and .NET development through three complementary projects.
+The Help Desk Ticket Management System demonstrates how ASP.NET Core MVC can be used to develop a functional web application with structured ticket management capabilities.
+The ASP.NET Core Web API demonstrates how RESTful services can be created to provide backend functionality and allow different client applications to communicate with a server through HTTP.
+The xUnit Test Project demonstrates the importance of automated unit testing in ensuring that application logic behaves correctly and remains reliable as the software evolves.
+Together, these projects provide practical experience in web development, RESTful API development, database integration, software architecture, and automated testing. They also demonstrate the importance of writing maintainable, testable, and scalable software using the modern .NET ecosystem.
+________________________________________
+
+
